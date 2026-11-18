@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PathSnap · Trip evaluator</title><link rel="stylesheet" href="vendor/leaflet/leaflet.css"><link rel="stylesheet" href="style.css"></head>
+<body><main><header><div><strong class="brand">PathSnap</strong><h1>Trip evaluator</h1></div><div id="mode" aria-live="polite"></div></header>
+<form id="control"><label>Trip <select id="trip" required disabled></select></label><button id="run" disabled>Predict route</button><button type="button" id="refresh">Refresh trips</button></form>
+<p id="status" role="status"></p><section id="result" hidden><h2 id="title"></h2><dl id="metrics"></dl><div id="map" aria-label="Interactive map of the trip"></div><div class="legend"><span class="gps">● GPS readings</span><span class="route">━ Predicted route</span><span>━ Road network</span></div></section></main>
+<script src="vendor/leaflet/leaflet.js"></script><script src="app.js"></script></body></html>
