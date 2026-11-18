@@ -1,0 +1,12 @@
+INFO:     Started server process [51099]
+INFO:     Waiting for application startup.
+2026-11-18 12:11:14,340 [ERROR] pathsnap.api: Configured evaluation directory does not exist or is not a directory: /private/tmp/nonexistent_pathsnap_eval_dir
+2026-11-18 12:11:14,546 [INFO] pathsnap.api: PathSnap backend ready | mode=evaluation | model=Histogram Gradient Boosting | trips=0 | trips_dir=None
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56654 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56655 - "GET /trips HTTP/1.1" 503 Service Unavailable
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51099]

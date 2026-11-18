@@ -1,0 +1,211 @@
+{
+  "hmm_config": {
+    "emit_weight": 1.0,
+    "prob_clip_eps": 1e-06,
+    "beta_m": 15.0,
+    "gap_beta_m": 60.0,
+    "stay_same_arc_bonus": 0.25,
+    "backward_pen_per_m": 0.25,
+    "switch_penalty": 0.2,
+    "u_turn_penalty": 4.0,
+    "multihop_base_penalty": 0.6,
+    "disconnected_penalty": 12.0,
+    "gap_disconnected_penalty": 4.0,
+    "gap_dt_thresh_s": 2.0,
+    "large_gap_dt_thresh_s": 10.0,
+    "large_gap_dist_m": 150.0,
+    "max_dijkstra_dist_m": 1500.0
+  },
+  "train15_oof_grid_search": [
+    {
+      "grid_idx": 0,
+      "overrides": {
+        "beta_m": 12.0,
+        "u_turn_penalty": 3.0,
+        "emit_weight": 1.0,
+        "disconnected_penalty": 10.0
+      },
+      "train15_oof_top1": 0.88856,
+      "train15_oof_seq_lcs_f1": 0.86535,
+      "train15_oof_continuity": 0.97404,
+      "composite_score": 0.87928
+    },
+    {
+      "grid_idx": 1,
+      "overrides": {
+        "beta_m": 15.0,
+        "u_turn_penalty": 4.0,
+        "emit_weight": 1.0,
+        "disconnected_penalty": 12.0
+      },
+      "train15_oof_top1": 0.89149,
+      "train15_oof_seq_lcs_f1": 0.86757,
+      "train15_oof_continuity": 0.97346,
+      "composite_score": 0.88192
+    },
+    {
+      "grid_idx": 2,
+      "overrides": {
+        "beta_m": 20.0,
+        "u_turn_penalty": 5.0,
+        "emit_weight": 1.2,
+        "disconnected_penalty": 14.0
+      },
+      "train15_oof_top1": 0.88866,
+      "train15_oof_seq_lcs_f1": 0.86104,
+      "train15_oof_continuity": 0.97167,
+      "composite_score": 0.87761
+    },
+    {
+      "grid_idx": 3,
+      "overrides": {
+        "beta_m": 15.0,
+        "u_turn_penalty": 4.0,
+        "emit_weight": 1.5,
+        "disconnected_penalty": 12.0
+      },
+      "train15_oof_top1": 0.88245,
+      "train15_oof_seq_lcs_f1": 0.85215,
+      "train15_oof_continuity": 0.9716,
+      "composite_score": 0.87033
+    }
+  ],
+  "student_test_comparison": {
+    "n_trips": 10,
+    "n_scored_obs": 19133,
+    "candidate_miss_rate": 0.00146,
+    "classifier_only": {
+      "pointwise_top1_overall": 0.85606,
+      "route_continuity_mean": 0.93476,
+      "seq_lcs_f1_mean": 0.70951,
+      "seq_length_weighted_f1_mean": 0.9123
+    },
+    "classifier_plus_hmm": {
+      "pointwise_top1_overall": 0.91941,
+      "route_continuity_mean": 0.97606,
+      "seq_lcs_f1_mean": 0.90999,
+      "seq_length_weighted_f1_mean": 0.9761,
+      "total_decode_seconds": 1.9179,
+      "mean_decode_ms_per_trip": 191.79
+    },
+    "improvements": {
+      "delta_pointwise_top1": 0.06335,
+      "delta_route_continuity": 0.04131,
+      "delta_seq_lcs_f1": 0.20047,
+      "total_obs_fixed_by_hmm": 1482,
+      "total_obs_hurt_by_hmm": 270,
+      "net_obs_gained": 1212
+    }
+  },
+  "case_study_and_map": {
+    "featured_trip_id": "00000077",
+    "folium_map_path": "/Users/ud/Desktop/Pathsnap/outputs/milestone5/student_test_00000077_hmm_map.html",
+    "static_plot_path": "/Users/ud/Desktop/Pathsnap/outputs/milestone5/student_test_00000077_hmm_route.png",
+    "fixed_case_example": {
+      "trip_id": "00000077",
+      "obs_id": 2018,
+      "timestamp_s": 2019.0,
+      "lon_lat": [
+        50.829219,
+        61.652243
+      ],
+      "reference_arc_id": 4066,
+      "classifier_only_arc_id": 602,
+      "hmm_viterbi_arc_id": 4066,
+      "hmm_prev_arc_id": 4066,
+      "hmm_next_arc_id": 4066,
+      "prev_to_hmm_connected": true,
+      "prev_to_clf_connected": true,
+      "top_candidates": [
+        {
+          "arc_id": 602,
+          "prob": 0.334,
+          "dist_m": 7.12,
+          "heading_diff_deg": 74.7,
+          "is_stationary": 0
+        },
+        {
+          "arc_id": 1977,
+          "prob": 0.2996,
+          "dist_m": 9.29,
+          "heading_diff_deg": 28.3,
+          "is_stationary": 0
+        },
+        {
+          "arc_id": 4066,
+          "prob": 0.2217,
+          "dist_m": 7.12,
+          "heading_diff_deg": 105.3,
+          "is_stationary": 0
+        },
+        {
+          "arc_id": 601,
+          "prob": 0.067,
+          "dist_m": 9.29,
+          "heading_diff_deg": 151.7,
+          "is_stationary": 0
+        },
+        {
+          "arc_id": 4065,
+          "prob": 0.0519,
+          "dist_m": 8.34,
+          "heading_diff_deg": 73.8,
+          "is_stationary": 0
+        }
+      ]
+    },
+    "hurt_case_example": {
+      "trip_id": "00000077",
+      "obs_id": 202,
+      "timestamp_s": 203.0,
+      "lon_lat": [
+        50.803919,
+        61.696489
+      ],
+      "reference_arc_id": 8343,
+      "classifier_only_arc_id": 8343,
+      "hmm_viterbi_arc_id": 8339,
+      "hmm_prev_arc_id": 8343,
+      "hmm_next_arc_id": 8339,
+      "prev_to_hmm_connected": true,
+      "prev_to_clf_connected": true,
+      "top_candidates": [
+        {
+          "arc_id": 8343,
+          "prob": 0.3866,
+          "dist_m": 6.0,
+          "heading_diff_deg": 72.0,
+          "is_stationary": 0
+        },
+        {
+          "arc_id": 8339,
+          "prob": 0.3574,
+          "dist_m": 10.87,
+          "heading_diff_deg": 12.5,
+          "is_stationary": 0
+        },
+        {
+          "arc_id": 8341,
+          "prob": 0.114,
+          "dist_m": 6.0,
+          "heading_diff_deg": 108.0,
+          "is_stationary": 0
+        },
+        {
+          "arc_id": 912,
+          "prob": 0.1001,
+          "dist_m": 10.87,
+          "heading_diff_deg": 167.5,
+          "is_stationary": 0
+        },
+        {
+          "arc_id": 862,
+          "prob": 0.0392,
+          "dist_m": 11.95,
+          "heading_diff_deg": 12.5,
+          "is_stationary": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+.DS_Store
+.env
+.env.*
+Guidelines/
+*.track
+*.nodes
+*.arcs
+*.route
+outputs/milestone2/cache/

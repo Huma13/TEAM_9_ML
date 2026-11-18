@@ -1,0 +1,12 @@
+INFO:     Started server process [51097]
+INFO:     Waiting for application startup.
+2026-11-18 12:11:11,926 [INFO] pathsnap.api: PathSnap backend ready | mode=development | model=Histogram Gradient Boosting | trips=10 | trips_dir=/Users/ud/Desktop/Pathsnap/Guidelines/Student folder/student_test
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56645 - "GET /health HTTP/1.1" 200 OK
+2026-11-18 12:11:12,633 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000000 | gps=2503 | segs=187 | continuity=0.9948 | top1=0.9585 | seq_lcs_f1=0.9290 | elapsed=239.3 ms
+INFO:     127.0.0.1:56646 - "POST /predict HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51097]

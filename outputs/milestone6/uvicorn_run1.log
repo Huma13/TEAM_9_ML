@@ -1,0 +1,33 @@
+INFO:     Started server process [51091]
+INFO:     Waiting for application startup.
+2026-11-18 12:11:01,827 [INFO] pathsnap.api: PathSnap backend ready | mode=development | model=Histogram Gradient Boosting | trips=10 | trips_dir=/Users/ud/Desktop/Pathsnap/Guidelines/Student folder/student_test
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56623 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56624 - "GET /trips HTTP/1.1" 200 OK
+2026-11-18 12:11:02,152 [WARNING] pathsnap.api: PREDICT 404 | mode=development | trip_id=99999999 not in available trips
+INFO:     127.0.0.1:56625 - "POST /predict HTTP/1.1" 404 Not Found
+2026-11-18 12:11:02,807 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000000 | gps=2503 | segs=187 | continuity=0.9948 | top1=0.9585 | seq_lcs_f1=0.9290 | elapsed=301.4 ms
+INFO:     127.0.0.1:56626 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:03,095 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000007 | gps=1354 | segs=122 | continuity=0.9993 | top1=0.9911 | seq_lcs_f1=0.9878 | elapsed=96.1 ms
+INFO:     127.0.0.1:56627 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:03,548 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000009 | gps=1049 | segs=381 | continuity=0.9466 | top1=0.8761 | seq_lcs_f1=0.8790 | elapsed=259.6 ms
+INFO:     127.0.0.1:56628 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:04,355 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000040 | gps=2995 | segs=310 | continuity=0.9943 | top1=0.9803 | seq_lcs_f1=0.9661 | elapsed=357.8 ms
+INFO:     127.0.0.1:56629 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:04,478 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000052 | gps=262 | segs=83 | continuity=0.9655 | top1=0.9657 | seq_lcs_f1=0.9326 | elapsed=71.4 ms
+INFO:     127.0.0.1:56631 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:06,720 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000056 | gps=3958 | segs=1190 | continuity=0.9641 | top1=0.9448 | seq_lcs_f1=0.9256 | elapsed=777.9 ms
+INFO:     127.0.0.1:56632 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:07,045 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000065 | gps=768 | segs=141 | continuity=0.9843 | top1=0.9180 | seq_lcs_f1=0.9371 | elapsed=202.9 ms
+INFO:     127.0.0.1:56633 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:08,057 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000076 | gps=1486 | segs=355 | continuity=0.9623 | top1=0.9038 | seq_lcs_f1=0.8724 | elapsed=495.4 ms
+INFO:     127.0.0.1:56634 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:09,221 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000077 | gps=3911 | segs=356 | continuity=0.9826 | top1=0.8108 | seq_lcs_f1=0.8173 | elapsed=605.0 ms
+INFO:     127.0.0.1:56635 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 12:11:09,577 [INFO] pathsnap.api: PREDICT 200 | mode=development | trip_id=00000091 | gps=874 | segs=190 | continuity=0.9668 | top1=0.9256 | seq_lcs_f1=0.8531 | elapsed=213.2 ms
+INFO:     127.0.0.1:56636 - "POST /predict HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [51091]
