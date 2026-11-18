@@ -1,0 +1,29 @@
+{
+  "lan_ip": "10.1.25.138",
+  "lan_url": "http://10.1.25.138:8000",
+  "active_mode_tested": "development",
+  "n_student_test_trips_verified": 10,
+  "mean_top1_accuracy": 0.92746,
+  "mean_route_continuity": 0.97606,
+  "mean_seq_lcs_f1": 0.90999,
+  "mean_elapsed_ms": 338.06,
+  "restart_verified": true,
+  "missing_eval_dir_verified": {
+    "health_response": {
+      "status": "degraded",
+      "ready": false,
+      "model_loaded": true,
+      "active_mode": "evaluation",
+      "model_name": "Histogram Gradient Boosting",
+      "decoder": "HMM/Viterbi",
+      "available_trip_count": 0,
+      "error": "Configured evaluation directory does not exist or is not a directory: /private/tmp/nonexistent_pathsnap_eval_dir",
+      "timestamp_utc": "2026-11-18T06:41:14.780807+00:00"
+    },
+    "trips_status_code": 503,
+    "trips_detail": {
+      "detail": "Configured evaluation directory does not exist or is not a directory: /private/tmp/nonexistent_pathsnap_eval_dir"
+    }
+  },
+  "laptop2_reachability": "pending (must be tested physically from Laptop 2 on same LAN)"
+}

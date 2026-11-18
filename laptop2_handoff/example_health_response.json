@@ -1,0 +1,11 @@
+{
+  "status": "ready",
+  "ready": true,
+  "model_loaded": true,
+  "active_mode": "development",
+  "model_name": "Histogram Gradient Boosting",
+  "decoder": "HMM/Viterbi",
+  "available_trip_count": 10,
+  "error": null,
+  "timestamp_utc": "2026-11-18T06:41:02.121180+00:00"
+}
