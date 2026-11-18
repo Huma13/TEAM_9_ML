@@ -1,0 +1,53 @@
+{
+  "trip_id": "00000005",
+  "split": "train",
+  "counts": {
+    "n_gps": 1045,
+    "n_nodes": 898,
+    "n_arcs": 1579,
+    "n_route": 105
+  },
+  "expected_counts": {
+    "n_gps": 1045,
+    "n_nodes": 898,
+    "n_arcs": 1579,
+    "n_route": 105
+  },
+  "counts_verified": true,
+  "traced_arcs": [
+    {
+      "arc_id": 176,
+      "in_reference_route": true,
+      "from_node_id": 143,
+      "to_node_id": 140,
+      "from_lon_lat": [
+        35.548172,
+        49.615574
+      ],
+      "to_lon_lat": [
+        35.544044,
+        49.612933
+      ],
+      "length_m": 418.661,
+      "bearing_deg": 225.41
+    },
+    {
+      "arc_id": 0,
+      "in_reference_route": false,
+      "from_node_id": 1,
+      "to_node_id": 0,
+      "from_lon_lat": [
+        35.551175,
+        49.617149
+      ],
+      "to_lon_lat": [
+        35.554415,
+        49.618875
+      ],
+      "length_m": 302.768,
+      "bearing_deg": 50.62
+    }
+  ],
+  "folium_map_path": "/Users/ud/Desktop/Pathsnap/outputs/milestone1/trip_00000005_map.html",
+  "static_plot_path": "/Users/ud/Desktop/Pathsnap/outputs/milestone1/trip_00000005_trajectory.png"
+}

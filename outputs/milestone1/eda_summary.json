@@ -1,0 +1,93 @@
+{
+  "python_version": "3.12.6",
+  "train_dir": "/Users/ud/Desktop/Pathsnap/Guidelines/Student folder/train",
+  "student_test_dir": "/Users/ud/Desktop/Pathsnap/Guidelines/Student folder/student_test",
+  "n_train_trips": 80,
+  "n_student_test_trips": 10,
+  "overlap_trip_ids": 0,
+  "all_files_present": true,
+  "total_gps_train": 208417,
+  "total_gps_student_test": 19160,
+  "total_nodes_all": 2024174,
+  "total_arcs_all": 4061945,
+  "total_route_entries_all": 34813,
+  "total_parse_bad_rows": 0,
+  "total_invalid_coords": 0,
+  "total_invalid_arc_endpoints": 0,
+  "total_invalid_route_ids": 0,
+  "total_negative_dt": 0,
+  "total_zero_dt": 0,
+  "pct_exact_1s_all": 96.682,
+  "max_dt_s_all": 153064.0,
+  "trips_with_dt_gt_5s": 47,
+  "trips_with_dt_gt_10s": 42,
+  "trips_with_isolated_nodes": 0,
+  "total_isolated_nodes": 0,
+  "trips_with_multiple_wcc": 89,
+  "trips_with_self_loops": 9,
+  "trips_with_duplicate_arcs": 60,
+  "mean_route_continuity_pct": 99.939,
+  "min_route_continuity_pct": 98.13,
+  "trips_with_repeated_route_arcs": 10,
+  "lon_range": [
+    -100.418538,
+    137.237029
+  ],
+  "lat_range": [
+    -34.640291,
+    61.69959
+  ],
+  "worked_example_00000005": {
+    "trip_id": "00000005",
+    "split": "train",
+    "counts": {
+      "n_gps": 1045,
+      "n_nodes": 898,
+      "n_arcs": 1579,
+      "n_route": 105
+    },
+    "expected_counts": {
+      "n_gps": 1045,
+      "n_nodes": 898,
+      "n_arcs": 1579,
+      "n_route": 105
+    },
+    "counts_verified": true,
+    "traced_arcs": [
+      {
+        "arc_id": 176,
+        "in_reference_route": true,
+        "from_node_id": 143,
+        "to_node_id": 140,
+        "from_lon_lat": [
+          35.548172,
+          49.615574
+        ],
+        "to_lon_lat": [
+          35.544044,
+          49.612933
+        ],
+        "length_m": 418.661,
+        "bearing_deg": 225.41
+      },
+      {
+        "arc_id": 0,
+        "in_reference_route": false,
+        "from_node_id": 1,
+        "to_node_id": 0,
+        "from_lon_lat": [
+          35.551175,
+          49.617149
+        ],
+        "to_lon_lat": [
+          35.554415,
+          49.618875
+        ],
+        "length_m": 302.768,
+        "bearing_deg": 50.62
+      }
+    ],
+    "folium_map_path": "/Users/ud/Desktop/Pathsnap/outputs/milestone1/trip_00000005_map.html",
+    "static_plot_path": "/Users/ud/Desktop/Pathsnap/outputs/milestone1/trip_00000005_trajectory.png"
+  }
+}
