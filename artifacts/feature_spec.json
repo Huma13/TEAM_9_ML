@@ -1,0 +1,40 @@
+{
+  "projection": "Trip-local Azimuthal Equidistant (+proj=aeqd) centered on trip median (lon, lat), WGS84 datum, units=meters",
+  "coordinate_order_raw": "longitude, latitude",
+  "candidate_config": {
+    "search_radius_m": 60.0,
+    "max_candidates": 10,
+    "fallback_k": 4,
+    "stationary_speed_thresh_mps": 1.0,
+    "stationary_disp_thresh_m": 1.5,
+    "heading_min_disp_m": 2.5,
+    "heading_window_max_steps": 5,
+    "speed_clip_mps": 60.0,
+    "dt_clip_s": 120.0
+  },
+  "feature_columns": [
+    "dist_m",
+    "dist_rank",
+    "dist_diff_from_best",
+    "dist_ratio_to_best",
+    "n_candidates",
+    "heading_diff_deg",
+    "cos_heading_diff",
+    "heading_valid",
+    "is_stationary",
+    "obs_speed_mps",
+    "dt_prev_s",
+    "dt_next_s",
+    "proj_frac",
+    "arc_len_m",
+    "has_reverse_arc",
+    "heading_rank",
+    "prev_dist_m",
+    "next_dist_m",
+    "along_arc_progress_m",
+    "from_node_out_deg",
+    "to_node_out_deg"
+  ],
+  "stationary_handling": "When speed < 1.0 m/s or max adjacent step < 1.5 m, is_stationary=1, heading_valid=0, heading_diff_deg=90.0, cos_heading_diff=0.0.",
+  "leakage_guarantee": "All 21 features use exclusively .track, .nodes, and .arcs; .route is never read during inference."
+}

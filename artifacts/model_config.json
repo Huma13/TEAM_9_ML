@@ -1,0 +1,67 @@
+{
+  "selected_model_key": "hist_gradient_boosting",
+  "selected_model_name": "Histogram Gradient Boosting",
+  "best_params": {
+    "learning_rate": 0.021848629312930523,
+    "max_leaf_nodes": 95,
+    "min_samples_leaf": 175,
+    "l2_regularization": 11.12454811271779,
+    "max_bins": 255,
+    "max_iter": 300
+  },
+  "n_optuna_trials": 12,
+  "optuna_best_trial_number": 7,
+  "optuna_total_seconds": 1487.23,
+  "refit_seconds": 34.879,
+  "artifact_path": "/Users/ud/Desktop/Pathsnap/artifacts/model_bundle.joblib",
+  "artifact_size_bytes": 1483559,
+  "tuned_cv_macro_f1": 0.90441,
+  "tuned_cv_top1": 0.83618,
+  "tuned_cv_log_loss": 0.11197,
+  "tuned_student_test_metrics": {
+    "cand_accuracy": 0.9608731788055949,
+    "cand_precision_pos": 0.8740989379849227,
+    "cand_recall_pos": 0.8314577335775974,
+    "cand_f1_pos": 0.852245292129406,
+    "cand_macro_precision": 0.9239173319614662,
+    "cand_macro_recall": 0.9063262301053652,
+    "cand_macro_f1": 0.914848144287966,
+    "cand_log_loss": 0.09593806721435842,
+    "confusion_matrix": {
+      "tn": 119380,
+      "fp": 2288,
+      "fn": 3220,
+      "tp": 15885
+    },
+    "n_candidates": 140773,
+    "n_positive": 19105,
+    "n_total_obs": 19160,
+    "n_scored_obs": 19133,
+    "n_covered_scored_obs": 19105,
+    "n_missed_scored_obs": 28,
+    "candidate_miss_rate": 0.001463440129618983,
+    "obs_top1_overall": 0.85606021010819,
+    "obs_top1_given_covered": 0.8573148390473698,
+    "route_continuity": 0.9347565764037815,
+    "transition_continuity_changes_only": 0.7833547842343884,
+    "seq_arc_f1": 0.8644933658800354,
+    "seq_length_weighted_f1": 0.9123044463296898,
+    "seq_lcs_f1": 0.7095138172778398
+  },
+  "reload_verification": {
+    "subprocess_exit_code": 0,
+    "sample_trip_id": "00000000",
+    "route_loaded": false,
+    "n_cands": 11587,
+    "mean_prob": 0.21738000287877235,
+    "first5_probs": [
+      0.988538,
+      0.00134,
+      0.001657,
+      0.013627,
+      0.000587
+    ],
+    "max_abs_diff_vs_inprocess_first5": 0.0,
+    "verified": true
+  }
+}

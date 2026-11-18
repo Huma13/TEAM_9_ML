@@ -1,0 +1,118 @@
+{
+  "search_space": {
+    "model_key": "hist_gradient_boosting",
+    "model_name": "Histogram Gradient Boosting",
+    "sampler": "Optuna TPESampler (Bayesian Tree-structured Parzen Estimator, seed=42)",
+    "objective": "Maximize 5-fold Group-CV Candidate Macro F1-score on the 80 training trips",
+    "parameters": {
+      "learning_rate": {
+        "type": "log_uniform",
+        "low": 0.02,
+        "high": 0.25,
+        "rationale": "Controls shrinkage per boosting stage vs generalization."
+      },
+      "max_leaf_nodes": {
+        "type": "int",
+        "low": 15,
+        "high": 127,
+        "rationale": "Controls interaction depth and tree complexity."
+      },
+      "min_samples_leaf": {
+        "type": "int",
+        "low": 20,
+        "high": 200,
+        "rationale": "Regularizes leaf support to prevent overfitting to specific trips."
+      },
+      "l2_regularization": {
+        "type": "log_uniform",
+        "low": 0.001,
+        "high": 20.0,
+        "rationale": "Shrinks leaf weights and improves probability calibration (log-loss)."
+      },
+      "max_bins": {
+        "type": "categorical",
+        "choices": [
+          128,
+          255
+        ],
+        "rationale": "Histogram discretization resolution for distance/heading thresholds."
+      },
+      "max_iter": {
+        "type": "int",
+        "low": 150,
+        "high": 400,
+        "step": 50,
+        "rationale": "Upper bound on boosting rounds (with early stopping enabled)."
+      }
+    },
+    "n_trials": 12
+  },
+  "best_trial": {
+    "trial_number": 7.0,
+    "cv_macro_f1": 0.904414,
+    "cv_macro_f1_std": 0.018013,
+    "cv_top1_overall": 0.836184,
+    "cv_log_loss": 0.111975,
+    "elapsed_seconds": 158.01,
+    "param_learning_rate": 0.021848629312930523,
+    "param_max_leaf_nodes": 95.0,
+    "param_min_samples_leaf": 175.0,
+    "param_l2_regularization": 11.12454811271779,
+    "param_max_bins": 255.0,
+    "param_max_iter": 300.0
+  },
+  "best_params": {
+    "learning_rate": 0.021848629312930523,
+    "max_leaf_nodes": 95,
+    "min_samples_leaf": 175,
+    "l2_regularization": 11.12454811271779,
+    "max_bins": 255,
+    "max_iter": 300
+  },
+  "total_opt_seconds": 1487.23,
+  "refit_seconds": 34.879,
+  "comparison": [
+    {
+      "Variant": "Histogram Gradient Boosting (Untuned)",
+      "CV Macro F1": 0.90348,
+      "CV Macro F1 Std": 0.01849,
+      "CV Top-1 Accuracy": 0.83623,
+      "CV Log Loss": 0.11264,
+      "Student-Test Top-1 Accuracy": 0.85475,
+      "Student-Test Macro F1": 0.91339,
+      "Student-Test Log Loss": 0.09617,
+      "Student-Test Route Continuity": 0.93622,
+      "Student-Test Seq LCS F1": 0.7116,
+      "Inference Time (10 trips, s)": 0.3374
+    },
+    {
+      "Variant": "Histogram Gradient Boosting (Bayesian Tuned)",
+      "CV Macro F1": 0.90441,
+      "CV Macro F1 Std": 0.01801,
+      "CV Top-1 Accuracy": 0.83618,
+      "CV Log Loss": 0.11197,
+      "Student-Test Top-1 Accuracy": 0.85606,
+      "Student-Test Macro F1": 0.91485,
+      "Student-Test Log Loss": 0.09594,
+      "Student-Test Route Continuity": 0.93476,
+      "Student-Test Seq LCS F1": 0.70951,
+      "Inference Time (10 trips, s)": 0.5079
+    }
+  ],
+  "reload_verification": {
+    "subprocess_exit_code": 0,
+    "sample_trip_id": "00000000",
+    "route_loaded": false,
+    "n_cands": 11587,
+    "mean_prob": 0.21738000287877235,
+    "first5_probs": [
+      0.988538,
+      0.00134,
+      0.001657,
+      0.013627,
+      0.000587
+    ],
+    "max_abs_diff_vs_inprocess_first5": 0.0,
+    "verified": true
+  }
+}

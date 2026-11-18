@@ -1,0 +1,48 @@
+{
+  "model_key": "hist_gradient_boosting",
+  "model_name": "Histogram Gradient Boosting",
+  "sampler": "Optuna TPESampler (Bayesian Tree-structured Parzen Estimator, seed=42)",
+  "objective": "Maximize 5-fold Group-CV Candidate Macro F1-score on the 80 training trips",
+  "parameters": {
+    "learning_rate": {
+      "type": "log_uniform",
+      "low": 0.02,
+      "high": 0.25,
+      "rationale": "Controls shrinkage per boosting stage vs generalization."
+    },
+    "max_leaf_nodes": {
+      "type": "int",
+      "low": 15,
+      "high": 127,
+      "rationale": "Controls interaction depth and tree complexity."
+    },
+    "min_samples_leaf": {
+      "type": "int",
+      "low": 20,
+      "high": 200,
+      "rationale": "Regularizes leaf support to prevent overfitting to specific trips."
+    },
+    "l2_regularization": {
+      "type": "log_uniform",
+      "low": 0.001,
+      "high": 20.0,
+      "rationale": "Shrinks leaf weights and improves probability calibration (log-loss)."
+    },
+    "max_bins": {
+      "type": "categorical",
+      "choices": [
+        128,
+        255
+      ],
+      "rationale": "Histogram discretization resolution for distance/heading thresholds."
+    },
+    "max_iter": {
+      "type": "int",
+      "low": 150,
+      "high": 400,
+      "step": 50,
+      "rationale": "Upper bound on boosting rounds (with early stopping enabled)."
+    }
+  },
+  "n_trials": 12
+}

@@ -1,0 +1,67 @@
+{
+  "selected_model_key": "random_forest",
+  "selected_model_name": "Random Forest",
+  "primary_selection_metric": "5-fold Group-CV Candidate Macro F1-score (jointly verified with CV Obs-level Top-1, Log Loss for HMM emissions, fold stability, and inference latency)",
+  "ranking_by_cv_macro_f1": [
+    {
+      "key": "random_forest",
+      "name": "Random Forest",
+      "cv_macro_f1_mean": 0.83481,
+      "cv_macro_f1_std": 0.0175,
+      "cv_top1_mean": 0.73684,
+      "cv_log_loss_mean": 0.16736,
+      "student_test_macro_f1": 0.94351,
+      "student_test_top1": 0.90298,
+      "student_test_log_loss": 0.08442,
+      "student_test_infer_ms_per_trip": 19.34
+    },
+    {
+      "key": "decision_tree",
+      "name": "Decision Tree",
+      "cv_macro_f1_mean": 0.83085,
+      "cv_macro_f1_std": 0.02141,
+      "cv_top1_mean": 0.7226,
+      "cv_log_loss_mean": 0.2561,
+      "student_test_macro_f1": 0.9396,
+      "student_test_top1": 0.89951,
+      "student_test_log_loss": 0.12012,
+      "student_test_infer_ms_per_trip": 0.4
+    },
+    {
+      "key": "logistic_regression",
+      "name": "Logistic Regression",
+      "cv_macro_f1_mean": 0.83069,
+      "cv_macro_f1_std": 0.02413,
+      "cv_top1_mean": 0.74176,
+      "cv_log_loss_mean": 0.17749,
+      "student_test_macro_f1": 0.93482,
+      "student_test_top1": 0.90216,
+      "student_test_log_loss": 0.1121,
+      "student_test_infer_ms_per_trip": 0.46
+    },
+    {
+      "key": "hist_gradient_boosting",
+      "name": "Histogram Gradient Boosting",
+      "cv_macro_f1_mean": 0.82183,
+      "cv_macro_f1_std": 0.00169,
+      "cv_top1_mean": 0.72268,
+      "cv_log_loss_mean": 0.19007,
+      "student_test_macro_f1": 0.94612,
+      "student_test_top1": 0.91256,
+      "student_test_log_loss": 0.08328,
+      "student_test_infer_ms_per_trip": 17.83
+    },
+    {
+      "key": "knn",
+      "name": "K-Nearest Neighbours",
+      "cv_macro_f1_mean": 0.81229,
+      "cv_macro_f1_std": 0.00794,
+      "cv_top1_mean": 0.71576,
+      "cv_log_loss_mean": 0.26884,
+      "student_test_macro_f1": 0.94151,
+      "student_test_top1": 0.90644,
+      "student_test_log_loss": 0.12729,
+      "student_test_infer_ms_per_trip": 799.84
+    }
+  ]
+}
